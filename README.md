@@ -1,19 +1,44 @@
 # A Guide to Large Language Model Systems
 
-A guide to understanding how large language model systems work end to end.
+*Inference, hardware, retrieval, agents, and safety.*
+By Aditya Kamat
 
-It follows one ordinary chat request through the full stack, from tokens and inference to hardware, serving, retrieval, agents, and AI safety.
+This is a guide to how large language model systems actually work, from a single forward pass up to a full production system with retrieval, agents, and the safety problems that come with them.
 
-## What it covers
+It started as my own notes. I spent about a year learning this, and the explanations I needed were scattered across papers, talks, and docs. I put the whole picture in one place, in order, so you don't have to assemble it yourself the way I did.
 
-* Tokens, transformers, and inference
-* Prefill, decode, KV cache, and batching
-* GPUs, memory, and distributed inference
-* Model serving and performance
-* Embeddings, retrieval, and RAG
-* Agents and tool use
-* LLM system design
-* AI safety and alignment
+## How it's built
+
+It follows one ordinary chat request all the way down the stack. Each part wraps another layer around that request: the model, the work that makes it fast, the hardware, serving at scale, retrieval, agents, and finally safety. Every topic opens with the problem it solves, gives a rough mental model before the precise one, and keeps real numbers next to the context they came from. Anything deeper than a first read needs is marked, so you can skip it and come back later.
+
+## Who it's for
+
+You can write code and you understand the basics like memory and latency. You do not need a machine learning background. Where one helps, the chapter builds it before it relies on it.
+
+## Contents
+
+- [Part I. The model](01-the-model/): what a forward pass computes, and what it costs
+- [Part II. Inference](02-inference/): making one model fast, with the KV cache, batching, quantisation, and speculative decoding
+- [Part III. The hardware](03-hardware/): the GPU and the memory limits underneath everything
+- [Part IV. Serving](04-serving/): many requests sharing the hardware at a latency target
+- [Part V. Knowledge](05-knowledge/): retrieval, embeddings, and search
+- [Part VI. Agency](06-agency/): tools, the agent loop, and the action boundary
+- [Part VII. The system](07-system/): design, optimisation, profiling, and operations
+- [Part VIII. Safety and alignment](08-safety/): how models go wrong, and how to oversee them
+
+Appendices: beyond text, a glossary, and further reading.
+
+## How to read it
+
+Read it in order the first time. The layers build on each other, so a later chapter assumes the mental model an earlier one gave you. Once you have the whole picture, the chapters stand on their own as a reference.
+
+## Feedback
+
+If something is wrong or unclear, please open an issue. Corrections are welcome.
+
+## License
+
+The text is released under CC BY 4.0, so you are free to share and adapt it with attribution.
 
 ## Read the guide
 
