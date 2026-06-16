@@ -17,4 +17,4 @@ It follows one ordinary chat request through the full stack, from tokens and inf
 
 ## Read the guide
 
-[Read A Guide to Large Language Model Systems](./A-Guide-to-Large-Language-Model-Systems.pdf)
+[Read A Guide to Large Language Model Systems](./A%20Guide%20to%20Large%20Language%20Model%20Systems%20-%20Inference%2C%20hardware%2C%20retrieval%2C%20agents%2C%20and%20safety%20-%20Aditya%20Kamat.pdf)
